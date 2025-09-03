@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
+
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+  <main class="password-generator">
+
+    <header class="password-generator__title">
+      <h1>Password Generator</h1>
+    </header>
+
+    <div class="password-generator__container">
+
+      <div class="password-display">
+        <p><span>P4$5W0rD!</span></p>
+        <div class="flex">
+          <p class="copied-message">COPIED!</p>
+          <button class="copy-btn" aria-label="Copy password">
+            <img src="images/icon-copy.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div class="password-options">
+
+        <div class="password__length">
+          <div class="frame">
+            <h2>
+              Character Length
+            </h2>
+            <p class="number" id="value">0</p>
+          </div>
+          <input type="range" min="0" max="20" value="10" class="slider" id="length-range">
+        </div>
+
+        <ul class="password__checkboxs">
+          <li>
+            <label>
+              <input type="checkbox" id="uppercase">
+              <div class="square"></div>
+              Include Uppercase Letters
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="lowercase">
+              <div class="square"></div>
+              Include Lowercase Letters
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="numbers">
+              <div class="square"></div>
+              Include Numbers
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="symbols">
+              <div class="square"></div>
+              Include Symbols
+            </label>
+          </li>
+        </ul>
+
+        <div class="password__strength-indicator">
+          <h2>Strength</h2>
+          <div class="strength">
+            <p id="strength-label">MEDIUM</p>
+            <div class="bars-container">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="generate-btn">
+          <p> Generate</p>
+          <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/></svg>
+        </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
