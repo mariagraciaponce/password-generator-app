@@ -76,23 +76,28 @@ function updateStrength(password) {
 
   if (score <= 2) {
     strengthLabel.textContent = "TOO WEAK!";
+    strengthLabel.style.display = "block"; 
     strengthBars[0].classList.add("active", "red");
   } else if (score === 3) {
     strengthLabel.textContent = "WEAK";
+    strengthLabel.style.display = "block";
     strengthBars[0].classList.add("active", "orange");
     strengthBars[1].classList.add("active", "orange");
   } else if (score === 4) {
     strengthLabel.textContent = "MEDIUM";
+    strengthLabel.style.display = "block";
     strengthBars[0].classList.add("active", "yellow");
     strengthBars[1].classList.add("active", "yellow");
     strengthBars[2].classList.add("active", "yellow");
   } else if (score === 5) {
     strengthLabel.textContent = "STRONG";
+    strengthLabel.style.display = "block";
     strengthBars[0].classList.add("active", "green");
     strengthBars[1].classList.add("active", "green");
     strengthBars[2].classList.add("active", "green");
     strengthBars[3].classList.add("active", "green");
   }
+  
 }
 
 
@@ -106,5 +111,4 @@ copyBtn.addEventListener("click", () => {
   });
 });
 
-// --- GENERAR AL HACER CLICK ---
 generateBtn.addEventListener("click", generatePassword);
